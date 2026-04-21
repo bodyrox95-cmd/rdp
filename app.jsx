@@ -191,7 +191,7 @@ function HomePage({ navigate, showForm }) {
                 <h3 style={{ color: 'var(--white)', marginBottom: 12 }}>г. Рыбинск</h3>
                 <p style={{ color: 'rgba(255,255,255,0.65)', lineHeight: 1.7, marginBottom: 20 }}>Ул. Чкалова, 8. Офсетная и цифровая печать, предпечатная подготовка и послепечатная обработка на собственной производственной площадке.</p>
               </div>
-              <a href="tel:+74855214961" style={{ display: 'inline-block', color: 'var(--white)', fontWeight: 700, textDecoration: 'none', border: '2px solid var(--gold)', padding: '10px 16px', borderRadius: '4px', fontSize: 15 }}>+7 (4855) 21-49-61</a>
+              <a href="tel:+74855214961" style={{ display: 'inline-block', color: 'var(--white)', fontWeight: 700, textDecoration: 'none', border: '2px solid var(--gold)', padding: '12px 20px', borderRadius: '4px', fontSize: 14, transition: 'all 0.3s ease', cursor: 'pointer', opacity: 1 }} onMouseEnter={(e) => { e.target.style.opacity = '0.8'; e.target.style.transform = 'translateY(-2px)'; }} onMouseLeave={(e) => { e.target.style.opacity = '1'; e.target.style.transform = 'translateY(0)'; }}>+7 (4855) 21-49-61</a>
             </div>
             <div style={{ background: 'var(--leather)', color: 'var(--white)', padding: '40px', cursor: 'pointer', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }} onClick={() => navigate('/geo/moskva/')}>
               <div>
@@ -199,7 +199,7 @@ function HomePage({ navigate, showForm }) {
                 <h3 style={{ color: 'var(--white)', marginBottom: 12 }}>Москва</h3>
                 <p style={{ color: 'rgba(255,255,255,0.8)', lineHeight: 1.7, marginBottom: 20 }}>Производство в Рыбинске — самовывоз в Москве. Приедете — всё готово. Узнать адрес пункта →</p>
               </div>
-              <a href="tel:88002224076" onClick={(e) => e.stopPropagation()} style={{ display: 'inline-block', color: 'var(--white)', fontWeight: 700, textDecoration: 'none', border: '2px solid var(--white)', padding: '10px 16px', borderRadius: '4px', fontSize: 15 }}>8-800-222-40-76</a>
+              <a href="tel:88002224076" onClick={(e) => e.stopPropagation()} style={{ display: 'inline-block', color: 'var(--white)', fontWeight: 700, textDecoration: 'none', border: '2px solid var(--white)', padding: '12px 20px', borderRadius: '4px', fontSize: 14, transition: 'all 0.3s ease', cursor: 'pointer', opacity: 1 }} onMouseEnter={(e) => { e.target.style.opacity = '0.8'; e.target.style.transform = 'translateY(-2px)'; }} onMouseLeave={(e) => { e.target.style.opacity = '1'; e.target.style.transform = 'translateY(0)'; }}>8-800-222-40-76</a>
             </div>
             <div style={{ background: 'var(--white)', border: '1px solid var(--border)', padding: '40px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
               <div>
@@ -207,7 +207,7 @@ function HomePage({ navigate, showForm }) {
                 <h3 style={{ marginBottom: 12 }}>По всей России</h3>
                 <p style={{ color: 'var(--secondary)', lineHeight: 1.7, marginBottom: 20 }}>СДЭК и Деловые Линии. 1–3 дня в большинство городов. Москва, СПб, Екатеринбург, Новосибирск, Краснодар и другие.</p>
               </div>
-              <button className="btn-secondary" style={{ padding: '10px 20px', fontSize: 13 }} onClick={() => navigate('/dostavka/')}>Условия доставки</button>
+              <button className="btn-secondary" style={{ padding: '12px 20px', fontSize: 14, transition: 'all 0.3s ease', opacity: 1 }} onMouseEnter={(e) => { e.target.style.opacity = '0.8'; e.target.style.transform = 'translateY(-2px)'; }} onMouseLeave={(e) => { e.target.style.opacity = '1'; e.target.style.transform = 'translateY(0)'; }} onClick={() => navigate('/dostavka/')}>Условия доставки</button>
             </div>
           </div>
         </div>
