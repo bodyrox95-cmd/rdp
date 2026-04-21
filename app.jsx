@@ -30,7 +30,7 @@ function HomePage({ navigate, showForm }) {
           backgroundImage: 'repeating-linear-gradient(0deg, var(--white) 0, var(--white) 1px, transparent 1px, transparent 60px), repeating-linear-gradient(90deg, var(--white) 0, var(--white) 1px, transparent 1px, transparent 60px)' }} />
         {/* Gold accent line */}
         <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 4, background: 'linear-gradient(90deg, var(--leather), var(--gold), var(--leather))' }} />
-        <div className="container" style={{ position: 'relative' }}>
+        <div className="container hero-container" style={{ position: 'relative', display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) minmax(300px, 1fr)', gap: 64, alignItems: 'center' }}>
           <div style={{ maxWidth: 760 }}>
             <div style={{ display: 'flex', gap: 8, marginBottom: 24, flexWrap: 'wrap' }}>
               <span className="tag-leather">Работаем с 1860 года</span>
@@ -64,6 +64,27 @@ function HomePage({ navigate, showForm }) {
                   <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.45)', marginTop: 2 }}>{lbl}</div>
                 </div>
               )}
+            </div>
+          </div>
+
+          {/* Premium Book Display */}
+          <div className="hero-book-container" style={{ justifyContent: 'center', alignItems: 'center', minHeight: '500px', display: 'flex' }}>
+            <div style={{ position: 'relative', width: '100%', maxWidth: '320px', height: '420px' }}>
+              {/* Book shadow */}
+              <div style={{ position: 'absolute', bottom: -20, left: 10, right: 10, height: 30, background: 'radial-gradient(ellipse at center, rgba(0,0,0,0.3) 0%, transparent 70%)', borderRadius: '50%' }} />
+              {/* Book */}
+              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, #C8A96E 0%, #8B7355 50%, #5C4033 100%)', borderRadius: '8px', boxShadow: '0 20px 60px rgba(0,0,0,0.6), inset -2px 0 10px rgba(0,0,0,0.3)', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', padding: '40px 20px', textAlign: 'center', overflow: 'hidden' }}>
+                {/* Book highlight effect */}
+                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '40%', background: 'linear-gradient(180deg, rgba(255,255,255,0.15) 0%, transparent 100%)', borderRadius: '8px 8px 0 0' }} />
+                {/* Book spine effect */}
+                <div style={{ position: 'absolute', top: 0, right: -3, bottom: 0, width: 8, background: 'rgba(0,0,0,0.4)' }} />
+                {/* Content */}
+                <div style={{ position: 'relative', zIndex: 1 }}>
+                  <div style={{ fontSize: 32, fontWeight: 700, color: 'var(--white)', marginBottom: 16, fontFamily: 'var(--serif)', textShadow: '0 2px 8px rgba(0,0,0,0.3)' }}>РДП</div>
+                  <div style={{ fontSize: 16, fontWeight: 700, color: 'var(--gold)', marginBottom: 16, letterSpacing: '0.1em', textTransform: 'uppercase', textShadow: '0 1px 4px rgba(0,0,0,0.3)' }}>Рыбинский<br />дом печати</div>
+                  <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.9)', lineHeight: 1.6, textShadow: '0 1px 4px rgba(0,0,0,0.3)' }}>Типография<br />полного цикла<br />с 1860</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
