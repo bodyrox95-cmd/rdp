@@ -459,7 +459,7 @@ function ContactFormSection({ title = 'Готовы к печати?' }) {
               Оставьте контакты и параметры заказа — подготовим расчёт и подскажем оптимальный вариант по тиражу, материалам и срокам.
             </p>
             <div className="contact-side-meta" style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-              <a href="tel:88002224076" className="contact-side-phone" style={{ display: 'block', color: 'var(--gold)', fontFamily: 'var(--serif)', fontSize: 24, fontWeight: 700 }}>
+              <a href="tel:88002224076" className="contact-side-phone" style={{ display: 'block', color: 'var(--gold)', fontFamily: 'var(--serif)', fontSize: 24, fontWeight: 700, whiteSpace: 'nowrap' }}>
                 8-800-222-40-76
               </a>
               <div className="contact-side-note" style={{ color: 'rgba(255,255,255,0.5)', fontSize: 13 }}>бесплатный звонок · Пн–Пт 8:00–17:00</div>

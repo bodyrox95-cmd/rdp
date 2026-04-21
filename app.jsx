@@ -195,7 +195,7 @@ function HomePage({ navigate, showForm }) {
               <div style={{ color: 'rgba(255,255,255,0.7)', fontFamily: 'var(--serif)', fontSize: 13, textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 16 }}>Самовывоз</div>
               <h3 style={{ color: 'var(--white)', marginBottom: 12 }}>Москва</h3>
               <p style={{ color: 'rgba(255,255,255,0.8)', lineHeight: 1.7, marginBottom: 20 }}>Производство в Рыбинске — самовывоз в Москве. Приедете — всё готово. Узнать адрес пункта →</p>
-              <a href="tel:88002224076" style={{ color: 'var(--white)', fontWeight: 700, textDecoration: 'none' }}>8-800-222-40-76 бесплатно</a>
+              <a href="tel:88002224076" onClick={(e) => e.stopPropagation()} style={{ display: 'inline-block', color: 'var(--white)', fontWeight: 700, textDecoration: 'none', border: '2px solid var(--white)', padding: '10px 16px', borderRadius: '4px', fontSize: 15 }}>8-800-222-40-76</a>
             </div>
             <div style={{ background: 'var(--white)', border: '1px solid var(--border)', padding: '40px' }}>
               <div style={{ color: 'var(--leather)', fontFamily: 'var(--serif)', fontSize: 13, textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 16 }}>Доставка</div>
