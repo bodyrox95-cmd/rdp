@@ -45,10 +45,10 @@ function HomePage({ navigate, showForm }) {
               Офсетная и цифровая типография полного цикла. Печать книг, журналов, брошюр, визиток и деловой полиграфии. Производство в Рыбинске, расчёт стоимости под ваш тираж и доставка по России.
             </p>
             <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 48 }}>
-              <button className="btn-gold" style={{ fontSize: 16, padding: '16px 32px' }} onClick={showForm}>
+              <button className="btn-gold" style={{ fontSize: 16, padding: '16px 32px', minWidth: '200px' }} onClick={showForm}>
                 Рассчитать стоимость тиража
               </button>
-              <RouteLink href="/knigi/" navigate={navigate} className="btn-ghost-white" style={{ fontSize: 16, padding: '16px 32px' }}>
+              <RouteLink href="/knigi/" navigate={navigate} className="btn-ghost-white" style={{ fontSize: 16, padding: '16px 32px', minWidth: '200px' }}>
                 Смотреть услуги
               </RouteLink>
             </div>
@@ -189,13 +189,13 @@ function HomePage({ navigate, showForm }) {
               <div style={{ color: 'var(--gold)', fontFamily: 'var(--serif)', fontSize: 13, textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 16 }}>Производство</div>
               <h3 style={{ color: 'var(--white)', marginBottom: 12 }}>г. Рыбинск</h3>
               <p style={{ color: 'rgba(255,255,255,0.65)', lineHeight: 1.7, marginBottom: 20 }}>Ул. Чкалова, 8. Офсетная и цифровая печать, предпечатная подготовка и послепечатная обработка на собственной производственной площадке.</p>
-              <div style={{ color: 'var(--gold)', fontWeight: 700 }}>+7 (4855) 21-49-61</div>
+              <a href="tel:+74855214961" style={{ color: 'var(--gold)', fontWeight: 700, textDecoration: 'none' }}>+7 (4855) 21-49-61</a>
             </div>
             <div style={{ background: 'var(--leather)', color: 'var(--white)', padding: '40px', cursor: 'pointer' }} onClick={() => navigate('/geo/moskva/')}>
               <div style={{ color: 'rgba(255,255,255,0.7)', fontFamily: 'var(--serif)', fontSize: 13, textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 16 }}>Самовывоз</div>
               <h3 style={{ color: 'var(--white)', marginBottom: 12 }}>Москва</h3>
               <p style={{ color: 'rgba(255,255,255,0.8)', lineHeight: 1.7, marginBottom: 20 }}>Производство в Рыбинске — самовывоз в Москве. Приедете — всё готово. Узнать адрес пункта →</p>
-              <div style={{ color: 'var(--white)', fontWeight: 700 }}>8-800-222-40-76 бесплатно</div>
+              <a href="tel:88002224076" style={{ color: 'var(--white)', fontWeight: 700, textDecoration: 'none' }}>8-800-222-40-76 бесплатно</a>
             </div>
             <div style={{ background: 'var(--white)', border: '1px solid var(--border)', padding: '40px' }}>
               <div style={{ color: 'var(--leather)', fontFamily: 'var(--serif)', fontSize: 13, textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 16 }}>Доставка</div>
@@ -383,7 +383,9 @@ function ContactsPage({ navigate, showForm }) {
                 map(([lbl, val]) =>
                 <div key={lbl} style={{ display: 'flex', gap: 16, padding: '14px 0', borderBottom: '1px solid var(--border)' }}>
                     <div style={{ width: 160, flexShrink: 0, fontSize: 13, fontWeight: 700, color: 'var(--secondary)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>{lbl}</div>
-                    <div style={{ fontFamily: 'var(--serif)', fontSize: 16 }}>{val}</div>
+                    <div style={{ fontFamily: 'var(--serif)', fontSize: 16 }}>
+                      {lbl.includes('Телефон') ? <a href={`tel:${val.replace(/\D/g, '')}`} style={{ color: 'inherit', textDecoration: 'none' }}>{val}</a> : val}
+                    </div>
                   </div>
                 )}
               </div>

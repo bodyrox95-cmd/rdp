@@ -147,7 +147,7 @@ function Header({ navigate, currentPath }) {
             <RouteLink key={item.path} href={item.path} navigate={navigate} after={() => { setMenuOpen(false); setServicesOpen(false); }} className="mobile-nav-link">{item.label}</RouteLink>
           ))}
           <div style={{ marginTop: 24 }}>
-            <a href="tel:88002224076" style={{ display: 'block', color: 'var(--gold)', fontFamily: 'var(--serif)', fontSize: 22, fontWeight: 700, marginBottom: 8 }}>8-800-222-40-76</a>
+            <a href="tel:88002224076" style={{ display: 'block', background: 'var(--gold)', color: 'var(--ink)', fontFamily: 'var(--serif)', fontSize: 22, fontWeight: 700, marginBottom: 8, padding: '12px 20px', borderRadius: '4px', textAlign: 'center', textDecoration: 'none' }}>8-800-222-40-76</a>
             <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: 13, marginBottom: 16 }}>бесплатный звонок</div>
             <a href="https://vk.com/typography76" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', color: 'var(--white)', fontSize: 14, borderBottom: '1px solid rgba(255,255,255,0.2)' }}>Мы во ВКонтакте</a>
           </div>
@@ -494,7 +494,7 @@ function ContactFormSection({ title = 'Готовы к печати?' }) {
                   </div>
                   <div className="form-field">
                     <label className="form-label" style={{ color: 'rgba(255,255,255,0.5)' }}>Телефон *</label>
-                    <input required className="form-input" placeholder="+7 (___) ___-__-__" value={form.phone}
+                    <input required type="tel" className="form-input" placeholder="+7 (___) ___-__-__" value={form.phone}
                       style={{ background: 'rgba(255,255,255,0.05)', borderColor: 'rgba(255,255,255,0.15)', color: 'var(--white)' }}
                       onChange={e => setForm({...form, phone: e.target.value})} />
                   </div>
