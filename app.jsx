@@ -16,9 +16,9 @@ function HomePage({ navigate, showForm }) {
 
   const stats = [
   { value: 'Быстрый расчёт', label: 'подберём формат, тираж и стоимость' },
-  { value: 'Проверка макета', label: 'поможем подготовить файл к печати' },
+  { value: 'Проверка макета', label: 'подскажем, что исправить перед печатью' },
   { value: 'от 300 экз.', label: 'офсетная печать книг и полиграфии' },
-  { value: 'По России', label: 'доставка готовых заказов в регионы' }];
+  { value: 'Сроки и доставка', label: 'самовывоз в Москве и отправка в регионы' }];
 
 
   return (
@@ -115,11 +115,11 @@ function HomePage({ navigate, showForm }) {
               </p>
               <RouteLink href="/o-kompanii/" navigate={navigate} className="btn-secondary">О компании и производстве</RouteLink>
             </div>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+            <div className="utp-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
               {stats.map((s, i) =>
-              <div key={i} style={{ padding: '28px', background: i % 2 === 0 ? 'var(--bg)' : 'var(--ink)', border: '1px solid var(--border)' }}>
-                  <div style={{ fontFamily: 'var(--serif)', fontSize: 36, fontWeight: 700, color: i % 2 === 0 ? 'var(--leather)' : 'var(--gold)', lineHeight: 1 }}>{s.value}</div>
-                  <div style={{ fontSize: 13, color: i % 2 === 0 ? 'var(--secondary)' : 'rgba(255,255,255,0.6)', marginTop: 8, lineHeight: 1.4 }}>{s.label}</div>
+              <div key={i} className="utp-card" style={{ padding: '28px', background: i % 2 === 0 ? 'var(--bg)' : 'var(--ink)', border: '1px solid var(--border)' }}>
+                  <div className="utp-value" style={{ fontFamily: 'var(--serif)', fontSize: 36, fontWeight: 700, color: i % 2 === 0 ? 'var(--leather)' : 'var(--gold)', lineHeight: 1.02 }}>{s.value}</div>
+                  <div className="utp-label" style={{ fontSize: 13, color: i % 2 === 0 ? 'var(--secondary)' : 'rgba(255,255,255,0.72)', marginTop: 10, lineHeight: 1.45 }}>{s.label}</div>
                 </div>
               )}
             </div>

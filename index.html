@@ -232,6 +232,12 @@ img{max-width:100%;height:auto}
     ::-webkit-scrollbar-thumb:hover { background: var(--secondary); }
 
     /* Responsive */
+
+      .utp-grid { grid-template-columns: 1fr 1fr; }
+      .utp-card { min-height: 210px; }
+      .utp-value { word-break: normal; overflow-wrap: anywhere; }
+      .contact-side-meta { max-width: 520px; }
+
     @media (max-width: 768px) {
       .section { padding: 56px 0; }
       .container { padding: 0 16px; }
@@ -242,13 +248,23 @@ img{max-width:100%;height:auto}
       .desktop-nav { display: none !important; }
       .header-actions { margin-left: auto; gap: 8px !important; }
       .header-cta { display: none !important; }
-      .mobile-call-btn { display: inline-flex !important; align-items: center; justify-content: center; }
+      .mobile-call-btn { display: inline-flex !important; align-items: center; justify-content: center; min-width: 96px; }
+      .utp-grid { grid-template-columns: 1fr !important; }
+      .utp-card { min-height: auto !important; padding: 22px !important; }
+      .utp-value { font-size: 30px !important; }
+      .utp-label { font-size: 16px !important; line-height: 1.5 !important; }
+      .contact-side-meta { display: grid !important; grid-template-columns: 1fr !important; gap: 10px !important; }
+      .contact-side-phone { font-size: 34px !important; line-height: 1.05 !important; max-width: 260px; }
+      .contact-side-note { font-size: 14px !important; line-height: 1.45 !important; max-width: 240px; }
+      .contact-side-badges { flex-wrap: wrap !important; }
       .burger-btn { padding: 8px 10px !important; }
       .mobile-menu { padding: 20px 16px !important; }
       .topbar-left a[href^="tel:"]:last-of-type, .topbar-left span:nth-of-type(2) { display: none !important; }
     }
     @media (max-width: 560px) {
-      .mobile-call-btn { padding: 8px 10px !important; font-size: 11px !important; }
+      .mobile-call-btn { padding: 8px 10px !important; font-size: 11px !important; min-width: 88px; }
+      .contact-side-phone { font-size: 30px !important; max-width: 210px; }
+      .contact-side-note { max-width: none; }
     }
     @media (max-width: 480px) {
       .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
@@ -256,6 +272,7 @@ img{max-width:100%;height:auto}
       .topbar-left span:first-child { display: none !important; }
       .topbar-left { display: none !important; }
       .header-inner { min-height: 74px !important; }
+      .contact-side-badges { display: grid !important; grid-template-columns: 1fr 1fr; gap: 12px !important; }
     }
   </style>
   <script type="application/ld+json" data-static-schema>[{"@context": "https://schema.org", "@type": "Organization", "name": "Рыбинский дом печати", "url": "https://your-domain.ru", "logo": "https://your-domain.ru/favicon.svg", "telephone": "+7-800-222-40-76", "address": {"@type": "PostalAddress", "addressCountry": "RU", "addressLocality": "Рыбинск", "streetAddress": "ул. Чкалова, 8"}}, {"@context": "https://schema.org", "@type": "WebSite", "name": "Рыбинский дом печати", "url": "https://your-domain.ru", "inLanguage": "ru-RU"}]</script>

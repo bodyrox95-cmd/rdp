@@ -119,7 +119,7 @@ function Header({ navigate, currentPath }) {
               Рассчитать тираж
             </button>
             <a href="tel:88002224076" className="mobile-call-btn" style={{ display: 'none', padding: '9px 12px', border: '1.5px solid var(--border)', color: 'var(--ink)', fontSize: 12, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.04em', whiteSpace: 'nowrap' }}>
-              Позвонить
+              Звонок
             </a>
             {/* Burger */}
             <button className="burger-btn" aria-label="Открыть меню" onClick={() => setMenuOpen(true)} style={{ background: 'none', border: '1.5px solid var(--border)', padding: '8px 12px', cursor: 'pointer', display: 'flex', flexDirection: 'column', gap: 4 }}>
@@ -458,20 +458,20 @@ function ContactFormSection({ title = 'Готовы к печати?' }) {
             <p style={{ color: 'rgba(255,255,255,0.7)', lineHeight: 1.8, marginBottom: 32 }}>
               Оставьте контакты и параметры заказа — подготовим расчёт и подскажем оптимальный вариант по тиражу, материалам и срокам.
             </p>
-            <div style={{ display: 'flex', flex: 'column', gap: 16 }}>
-              <a href="tel:88002224076" style={{ display: 'block', color: 'var(--gold)', fontFamily: 'var(--serif)', fontSize: 24, fontWeight: 700 }}>
+            <div className="contact-side-meta" style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+              <a href="tel:88002224076" className="contact-side-phone" style={{ display: 'block', color: 'var(--gold)', fontFamily: 'var(--serif)', fontSize: 24, fontWeight: 700 }}>
                 8-800-222-40-76
               </a>
-              <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: 13 }}>бесплатный звонок · Пн–Пт 8:00–17:00</div>
+              <div className="contact-side-note" style={{ color: 'rgba(255,255,255,0.5)', fontSize: 13 }}>бесплатный звонок · Пн–Пт 8:00–17:00</div>
             </div>
-            <div style={{ marginTop: 24, display: 'flex', gap: 16 }}>
+            <div className="contact-side-badges" style={{ marginTop: 24, display: 'flex', gap: 16 }}>
               <div style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', padding: '16px 20px' }}>
                 <div style={{ color: 'var(--gold)', fontWeight: 700, fontSize: 14 }}>Самовывоз</div>
                 <div style={{ color: 'rgba(255,255,255,0.6)', fontSize: 13, marginTop: 4 }}>Москва</div>
               </div>
               <div style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', padding: '16px 20px' }}>
                 <div style={{ color: 'var(--gold)', fontWeight: 700, fontSize: 14 }}>Доставка</div>
-                <div style={{ color: 'rgba(255,255,255,0.6)', fontSize: 13, marginTop: 4 }}>По всей России</div>
+                <div style={{ color: 'rgba(255,255,255,0.6)', fontSize: 13, marginTop: 4 }}>ТК и самовывоз</div>
               </div>
             </div>
           </div>
