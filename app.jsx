@@ -73,7 +73,22 @@ function HomePage({ navigate, showForm }) {
           {/* Premium Book Display */}
             <div className="hero-book-container" style={{ justifyContent: 'center', alignItems: 'center', minHeight: '500px', display: 'flex' }}>
               <div style={{ width: '100%', maxWidth: 420, textAlign: 'center' }}>
-                <img src="/screenshots/current.png" alt="Примеры продукции — обложки, визитки и буклеты" style={{ width: '100%', height: 'auto', objectFit: 'contain', maxWidth: '420px', borderRadius: 8 }} />
+                <picture>
+                  <source srcSet={"screenshots/current.webp"} type="image/webp" />
+                  <img
+                    src={"screenshots/current.png"}
+                    alt="Примеры продукции — обложки, визитки и буклеты"
+                    style={{ width: '100%', height: 'auto', objectFit: 'contain', maxWidth: '420px', borderRadius: 8 }}
+                    onError={(e) => {
+                      if (!e.target.dataset.fallback) {
+                        e.target.dataset.fallback = '1';
+                        e.target.src = '/screenshots/current.webp';
+                      } else {
+                        e.target.style.display = 'none';
+                      }
+                    }}
+                  />
+                </picture>
               </div>
             </div>
         </div>
