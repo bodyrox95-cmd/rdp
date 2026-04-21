@@ -31,7 +31,7 @@ function ServicePage({ page, navigate, showForm }) {
               {[
                 ['160 лет', 'на рынке'],
                 ['Рыбинск', 'собственное производство'],
-                page.heroStat || ['от 500 экз.', 'минимальный тираж'],
+                page.heroStat || ['от 300 экз.', 'минимальный тираж'],
                 ['По России', 'доставка']
               ].map(([val, lbl], i) => (
                 <div key={i}>
@@ -174,7 +174,7 @@ function ServicePage({ page, navigate, showForm }) {
             {(page.portfolio || [
               { label: 'Книга в твёрдом переплёте 7БЦ', meta: 'Тираж 3 000 экз. · А5' },
               { label: 'Учебное пособие, КБС', meta: 'Тираж 1 500 экз. · 60×90/16' },
-              { label: 'Корпоративный ежедневник', meta: 'Тираж 500 экз. · А5, кожзам' },
+              { label: 'Корпоративный ежедневник', meta: 'Тираж 300 экз. · А5, кожзам' },
             ]).map((item, i) => (
               <div key={i} className="card" style={{ padding: 0 }}>
                 <ImgPlaceholder label={item.label} height={200} />

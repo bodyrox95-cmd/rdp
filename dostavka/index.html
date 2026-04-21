@@ -240,19 +240,22 @@ img{max-width:100%;height:auto}
       .topbar-right { display: none !important; }
       .header-inner { height: auto !important; min-height: 70px; gap: 12px !important; }
       .desktop-nav { display: none !important; }
-      .header-actions { margin-left: auto; gap: 6px !important; }
-      .header-cta { padding: 10px 12px !important; font-size: 12px !important; white-space: nowrap; }
+      .header-actions { margin-left: auto; gap: 8px !important; }
+      .header-cta { display: none !important; }
+      .mobile-call-btn { display: inline-flex !important; align-items: center; justify-content: center; }
       .burger-btn { padding: 8px 10px !important; }
       .mobile-menu { padding: 20px 16px !important; }
+      .topbar-left a[href^="tel:"]:last-of-type, .topbar-left span:nth-of-type(2) { display: none !important; }
     }
     @media (max-width: 560px) {
-      .topbar-left a[href^="tel:"]:last-of-type, .topbar-left span:nth-of-type(2) { display: none !important; }
+      .mobile-call-btn { padding: 8px 10px !important; font-size: 11px !important; }
     }
     @media (max-width: 480px) {
       .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
       .topbar-left { width: 100%; justify-content: space-between; }
       .topbar-left span:first-child { display: none !important; }
-      .header-cta { display: none !important; }
+      .topbar-left { display: none !important; }
+      .header-inner { min-height: 74px !important; }
     }
   </style>
   <script type="application/ld+json" data-static-schema>[{"@context": "https://schema.org", "@type": "Organization", "name": "Рыбинский дом печати", "url": "https://your-domain.ru", "logo": "https://your-domain.ru/favicon.svg", "telephone": "+7-800-222-40-76", "address": {"@type": "PostalAddress", "addressCountry": "RU", "addressLocality": "Рыбинск", "streetAddress": "ул. Чкалова, 8"}}, {"@context": "https://schema.org", "@type": "WebPage", "name": "Доставка и оплата — Рыбинский дом печати", "url": "https://your-domain.ru/dostavka/", "description": "Условия доставки готовых тиражей по России, самовывоз, транспортные компании и способы оплаты."}]</script>

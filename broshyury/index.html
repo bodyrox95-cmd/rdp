@@ -240,25 +240,28 @@ img{max-width:100%;height:auto}
       .topbar-right { display: none !important; }
       .header-inner { height: auto !important; min-height: 70px; gap: 12px !important; }
       .desktop-nav { display: none !important; }
-      .header-actions { margin-left: auto; gap: 6px !important; }
-      .header-cta { padding: 10px 12px !important; font-size: 12px !important; white-space: nowrap; }
+      .header-actions { margin-left: auto; gap: 8px !important; }
+      .header-cta { display: none !important; }
+      .mobile-call-btn { display: inline-flex !important; align-items: center; justify-content: center; }
       .burger-btn { padding: 8px 10px !important; }
       .mobile-menu { padding: 20px 16px !important; }
+      .topbar-left a[href^="tel:"]:last-of-type, .topbar-left span:nth-of-type(2) { display: none !important; }
     }
     @media (max-width: 560px) {
-      .topbar-left a[href^="tel:"]:last-of-type, .topbar-left span:nth-of-type(2) { display: none !important; }
+      .mobile-call-btn { padding: 8px 10px !important; font-size: 11px !important; }
     }
     @media (max-width: 480px) {
       .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
       .topbar-left { width: 100%; justify-content: space-between; }
       .topbar-left span:first-child { display: none !important; }
-      .header-cta { display: none !important; }
+      .topbar-left { display: none !important; }
+      .header-inner { min-height: 74px !important; }
     }
   </style>
   <script type="application/ld+json" data-static-schema>[{"@context": "https://schema.org", "@type": "Organization", "name": "Рыбинский дом печати", "url": "https://your-domain.ru", "logo": "https://your-domain.ru/favicon.svg", "telephone": "+7-800-222-40-76", "address": {"@type": "PostalAddress", "addressCountry": "RU", "addressLocality": "Рыбинск", "streetAddress": "ул. Чкалова, 8"}}, {"@context": "https://schema.org", "@type": "WebPage", "name": "Печать брошюр и сборников — Рыбинский дом печати", "url": "https://your-domain.ru/broshyury/", "description": "Брошюра — издание от 8 до 96 страниц в мягкой обложке. На скрепку — для тонких изданий до 64 полос. КБС — от 48 полос для более солидного вида.\\n\\nТипичные заказы: учебные сборники, методические пособия, рекламные каталоги, программы мероприятий, корпоративные отчёты."}]</script>
 </head>
 <body>
-  <div id="root"><div data-prerender="true"><header style="background:var(--bg);border-bottom:2px solid var(--ink)"><div class="container" style="padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap"><a href="/" style="font-family:var(--serif);font-size:28px;font-weight:700">РДП</a><nav style="display:flex;gap:16px;flex-wrap:wrap"><a href="/knigi/">Книги</a><a href="/zhurnaly/">Журналы</a><a href="/vizitki/">Визитки</a><a href="/listovki/">Листовки</a><a href="/kontakty/">Контакты</a></nav></div></header><main><section style="background:var(--ink);color:var(--white);padding:80px 0"><div class="container"><div style="margin-bottom:16px"><span class="tag tag-leather" style="margin-right:8px">Брошюры</span><span class="tag tag-leather" style="margin-right:8px">Сборники</span></div><h1 style="color:var(--white);max-width:900px">Печать брошюр и сборников</h1><p style="max-width:860px;color:rgba(255,255,255,.8);font-size:20px;margin:20px 0 32px">На скрепку или КБС. От 500 экз. офсетом. Форматы А4, А5. Срок от 5 рабочих дней.</p><div style="display:flex;gap:12px;flex-wrap:wrap"><button class="btn-primary" onclick="document.querySelector('.modal-overlay')?.remove();window.dispatchEvent(new Event('openLeadForm'));">Рассчитать тираж</button><a href="/kontakty/" class="btn-secondary">Контакты</a></div></div></section><div class="section" style="background:var(--white)"><div class="container"><h2 style="margin-bottom:16px">Что важно по услуге</h2><p style="max-width:840px">Брошюра — издание от 8 до 96 страниц в мягкой обложке. На скрепку — для тонких изданий до 64 полос. КБС — от 48 полос для более солидного вида.\n\nТипичные заказы: учебные сборники, методические пособия, рекламные каталоги, программы мероприятий, корпоративные отчёты.</p><div style="margin-top:24px"><a href="/kontakty/">Запросить расчёт</a> · <a href="/dostavka/">Условия доставки</a> · <a href="/dizayn-maketov/">Требования к макетам</a></div></div></div></main></div></div>
+  <div id="root"><div data-prerender="true"><header style="background:var(--bg);border-bottom:2px solid var(--ink)"><div class="container" style="padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap"><a href="/" style="font-family:var(--serif);font-size:28px;font-weight:700">РДП</a><nav style="display:flex;gap:16px;flex-wrap:wrap"><a href="/knigi/">Книги</a><a href="/zhurnaly/">Журналы</a><a href="/vizitki/">Визитки</a><a href="/listovki/">Листовки</a><a href="/kontakty/">Контакты</a></nav></div></header><main><section style="background:var(--ink);color:var(--white);padding:80px 0"><div class="container"><div style="margin-bottom:16px"><span class="tag tag-leather" style="margin-right:8px">Брошюры</span><span class="tag tag-leather" style="margin-right:8px">Сборники</span></div><h1 style="color:var(--white);max-width:900px">Печать брошюр и сборников</h1><p style="max-width:860px;color:rgba(255,255,255,.8);font-size:20px;margin:20px 0 32px">На скрепку или КБС. От 300 экз. офсетом. Форматы А4, А5. Срок от 5 рабочих дней.</p><div style="display:flex;gap:12px;flex-wrap:wrap"><button class="btn-primary" onclick="document.querySelector('.modal-overlay')?.remove();window.dispatchEvent(new Event('openLeadForm'));">Рассчитать тираж</button><a href="/kontakty/" class="btn-secondary">Контакты</a></div></div></section><div class="section" style="background:var(--white)"><div class="container"><h2 style="margin-bottom:16px">Что важно по услуге</h2><p style="max-width:840px">Брошюра — издание от 8 до 96 страниц в мягкой обложке. На скрепку — для тонких изданий до 64 полос. КБС — от 48 полос для более солидного вида.\n\nТипичные заказы: учебные сборники, методические пособия, рекламные каталоги, программы мероприятий, корпоративные отчёты.</p><div style="margin-top:24px"><a href="/kontakty/">Запросить расчёт</a> · <a href="/dostavka/">Условия доставки</a> · <a href="/dizayn-maketov/">Требования к макетам</a></div></div></div></main></div></div>
   <script type="text/babel" src="shared.jsx"></script>
   <script type="text/babel" src="service-template.jsx"></script>
   <script type="text/babel" src="pages-data.jsx"></script>

@@ -71,8 +71,8 @@ function Header({ navigate, currentPath }) {
             <a href="tel:+74855214961" style={{ color: 'rgba(255,255,255,0.7)', fontSize: 12 }}>+7 (4855) 21-49-61</a>
           </div>
           <div className="topbar-right" style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
-            <a href="https://wa.me/78002224076" style={{ color: 'var(--gold)', fontSize: 13, display: 'flex', alignItems: 'center', gap: 4 }}>
-              <span>WhatsApp</span>
+            <a href="https://vk.com/typography76" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--gold)', fontSize: 13, display: 'flex', alignItems: 'center', gap: 4 }}>
+              <span>ВКонтакте</span>
             </a>
             <span style={{ color: 'var(--border)' }}>|</span>
             <span style={{ color: 'rgba(255,255,255,0.6)', fontSize: 12 }}>г. Рыбинск, ул. Чкалова, 8</span>
@@ -114,10 +114,13 @@ function Header({ navigate, currentPath }) {
             </RouteLink>
           </nav>
 
-          <div className="header-actions" style={{ display: 'flex', gap: 8, flexShrink: 0 }}>
+          <div className="header-actions" style={{ display: 'flex', gap: 8, flexShrink: 0, alignItems: 'center' }}>
             <button className="btn-primary header-cta" style={{ padding: '10px 18px', fontSize: 13 }} onClick={() => setFormOpen(true)}>
               Рассчитать тираж
             </button>
+            <a href="tel:88002224076" className="mobile-call-btn" style={{ display: 'none', padding: '9px 12px', border: '1.5px solid var(--border)', color: 'var(--ink)', fontSize: 12, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.04em', whiteSpace: 'nowrap' }}>
+              Позвонить
+            </a>
             {/* Burger */}
             <button className="burger-btn" aria-label="Открыть меню" onClick={() => setMenuOpen(true)} style={{ background: 'none', border: '1.5px solid var(--border)', padding: '8px 12px', cursor: 'pointer', display: 'flex', flexDirection: 'column', gap: 4 }}>
               <span style={{ display: 'block', width: 20, height: 2, background: 'var(--ink)' }}/>
@@ -145,7 +148,8 @@ function Header({ navigate, currentPath }) {
           ))}
           <div style={{ marginTop: 24 }}>
             <a href="tel:88002224076" style={{ display: 'block', color: 'var(--gold)', fontFamily: 'var(--serif)', fontSize: 22, fontWeight: 700, marginBottom: 8 }}>8-800-222-40-76</a>
-            <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: 13 }}>бесплатный звонок</div>
+            <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: 13, marginBottom: 16 }}>бесплатный звонок</div>
+            <a href="https://vk.com/typography76" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', color: 'var(--white)', fontSize: 14, borderBottom: '1px solid rgba(255,255,255,0.2)' }}>Мы во ВКонтакте</a>
           </div>
         </div>
       )}
@@ -168,8 +172,9 @@ function Footer({ navigate }) {
             <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: 14, lineHeight: 1.7, marginBottom: 16 }}>
               Офсетная и цифровая типография полного цикла. Работаем с 1860 года. Производство в Рыбинске, доставка готовых тиражей по России.
             </p>
-            <div style={{ display: 'flex', gap: 8 }}>
+            <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
               <a href="tel:88002224076" style={{ color: 'var(--gold)', fontWeight: 700, fontSize: 15 }}>8-800-222-40-76</a>
+              <a href="https://vk.com/typography76" target="_blank" rel="noopener noreferrer" style={{ color: 'rgba(255,255,255,0.7)', fontSize: 13 }}>ВКонтакте</a>
             </div>
             <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: 12, marginTop: 4 }}>бесплатный звонок</div>
           </div>
@@ -277,10 +282,10 @@ function Breadcrumbs({ items, navigate }) {
 
 function TrustBar() {
   const items = [
-    { num: '1860', label: 'год основания', sub: 'история компании' },
-    { num: 'Чкалова, 8', label: 'производство в Рыбинске', sub: 'собственная площадка' },
-    { num: 'от 500', label: 'экземпляров', sub: 'офсетная печать' },
-    { num: 'СДЭК', label: 'доставка по России', sub: 'и Деловые Линии' },
+    { num: 'Быстрый расчёт', label: 'подберём формат, тираж и стоимость', sub: 'ответим в рабочее время' },
+    { num: 'Проверка макета', label: 'поможем подготовить файл к печати', sub: 'до запуска в тираж' },
+    { num: 'от 300 экз.', label: 'офсетная печать книг и полиграфии', sub: 'для тиражных заказов' },
+    { num: 'По России', label: 'доставка готовых заказов', sub: 'СДЭК и Деловые Линии' },
   ];
   return (
     <div style={{ background: 'var(--ink)', color: 'var(--white)' }}>
@@ -451,7 +456,7 @@ function ContactFormSection({ title = 'Готовы к печати?' }) {
             <h2 style={{ color: 'var(--white)', marginBottom: 16 }}>{title}</h2>
             <div style={{ width: 60, height: 3, background: 'var(--gold)', marginBottom: 24 }}/>
             <p style={{ color: 'rgba(255,255,255,0.7)', lineHeight: 1.8, marginBottom: 32 }}>
-              Отправьте ТЗ или макет — рассчитаем стоимость за 30 минут. Работаем с издательствами, авторами и корпоративными заказчиками.
+              Оставьте контакты и параметры заказа — подготовим расчёт и подскажем оптимальный вариант по тиражу, материалам и срокам.
             </p>
             <div style={{ display: 'flex', flex: 'column', gap: 16 }}>
               <a href="tel:88002224076" style={{ display: 'block', color: 'var(--gold)', fontFamily: 'var(--serif)', fontSize: 24, fontWeight: 700 }}>
