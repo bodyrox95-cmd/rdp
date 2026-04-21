@@ -28,6 +28,8 @@ function HomePage({ navigate, showForm }) {
         {/* Decorative background pattern */}
         <div style={{ position: 'absolute', inset: 0, opacity: 0.03,
           backgroundImage: 'repeating-linear-gradient(0deg, var(--white) 0, var(--white) 1px, transparent 1px, transparent 60px), repeating-linear-gradient(90deg, var(--white) 0, var(--white) 1px, transparent 1px, transparent 60px)' }} />
+        {/* Stars overlay (decorative, desktop only) */}
+        <div className="stars" aria-hidden="true" />
         {/* Gold accent line */}
         <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 4, background: 'linear-gradient(90deg, var(--leather), var(--gold), var(--leather))' }} />
         <div className="container hero-container" style={{ position: 'relative', display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) minmax(300px, 1fr)', gap: 64, alignItems: 'center' }}>
