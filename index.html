@@ -126,7 +126,13 @@ img{max-width:100%;height:auto}
     @keyframes starsTwinkle { 0%,100% { opacity: 0.6; transform: scale(1); } 50% { opacity: 1; transform: scale(1.06); } }
     /* Ensure hero content sits above stars */
     .hero-container { position: relative; z-index: 2; }
-    @media (max-width: 768px) { .stars { display: none !important; } }
+
+    /* Particles layer (extracted from provided HTML) */
+    #particles{position:absolute;inset:0;pointer-events:none;z-index:1;overflow:hidden}
+    .particle{position:absolute;width:2px;height:2px;background:var(--gold);border-radius:50%;opacity:0;animation:float linear infinite}
+    @keyframes float{0%{transform:translateY(100vh) translateX(0);opacity:0}10%{opacity:.6}90%{opacity:.2}100%{transform:translateY(-10vh) translateX(40px);opacity:0}}
+
+    @media (max-width: 768px) { .stars, #particles { display: none !important; } }
 
     /* Layout */
     .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
@@ -316,5 +322,24 @@ img{max-width:100%;height:auto}
   <script type="text/babel" src="pages-data.jsx"></script>
   <script type="text/babel" src="app.jsx"></script>
 <script>(function(){function a(scope){(scope.querySelectorAll?scope:document).querySelectorAll('img').forEach(function(img){if(!img.hasAttribute('loading'))img.setAttribute('loading','lazy');if(!img.hasAttribute('decoding'))img.setAttribute('decoding','async');if(!img.hasAttribute('fetchpriority'))img.setAttribute('fetchpriority','low');});(scope.querySelectorAll?scope:document).querySelectorAll('iframe').forEach(function(el){if(!el.hasAttribute('loading'))el.setAttribute('loading','lazy');});}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',function(){a(document);});}else{a(document);}new MutationObserver(function(m){m.forEach(function(x){x.addedNodes.forEach(function(n){if(n&&n.nodeType===1)a(n);});});}).observe(document.body,{childList:true,subtree:true});})();</script>
+<script>
+// Create decorative particles (from uploaded file) inside #particles
+document.addEventListener('DOMContentLoaded',()=>{
+  const pc = document.getElementById('particles');
+  if(!pc) return;
+  const count = 30;
+  for(let i=0;i<count;i++){
+    const p = document.createElement('div');
+    p.className = 'particle';
+    p.style.left = (Math.random()*100) + '%';
+    p.style.animationDuration = (8 + Math.random()*15) + 's';
+    p.style.animationDelay = (-Math.random()*20) + 's';
+    p.style.opacity = (0.2 + Math.random()*0.6).toString();
+    const size = (1 + Math.random()*2);
+    p.style.width = p.style.height = size + 'px';
+    pc.appendChild(p);
+  }
+});
+</script>
 </body>
 </html>
