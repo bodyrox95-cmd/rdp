@@ -73,22 +73,10 @@ function HomePage({ navigate, showForm }) {
           {/* Premium Book Display */}
             <div className="hero-book-container" style={{ justifyContent: 'flex-end', alignItems: 'center', minHeight: '500px', display: 'flex' }}>
               <div style={{ width: '100%', maxWidth: 520, textAlign: 'right', display: 'flex', justifyContent: 'flex-end' }}>
-                <picture>
-                  <source srcSet={"https://via.placeholder.com/800x600.webp?text=TEST"} type="image/webp" />
-                  <img
-                    src={"https://via.placeholder.com/800x600.png?text=TEST"}
-                    alt="Примеры продукции — обложки, визитки и буклеты"
-                    style={{ width: '100%', height: 'auto', objectFit: 'contain', maxWidth: '520px', maxHeight: '520px', borderRadius: 8 }}
-                    onError={(e) => {
-                      if (!e.target.dataset.fallback) {
-                        e.target.dataset.fallback = '1';
-                        e.target.src = '/screenshots/current.webp';
-                      } else {
-                        e.target.style.display = 'none';
-                      }
-                    }}
-                  />
-                </picture>
+                {/* DEBUG: temporary visual block to verify right column visibility */}
+                <div style={{ width: 420, height: 420, background: 'linear-gradient(135deg,#cc3 10%,#c33 90%)', borderRadius: 8, display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#112', fontWeight: 700, fontSize: 20 }}>
+                  ТЕСТ: правый столбец
+                </div>
               </div>
             </div>
         </div>
