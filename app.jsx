@@ -74,9 +74,9 @@ function HomePage({ navigate, showForm }) {
             <div className="hero-book-container" style={{ justifyContent: 'flex-end', alignItems: 'center', minHeight: '500px', display: 'flex' }}>
               <div style={{ width: '100%', maxWidth: 520, textAlign: 'right', display: 'flex', justifyContent: 'flex-end' }}>
                 <picture>
-                  <source srcSet={"/screenshots/current.webp"} type="image/webp" />
+                  <source srcSet={"https://via.placeholder.com/800x600.webp?text=TEST"} type="image/webp" />
                   <img
-                    src={"/screenshots/current.png"}
+                    src={"https://via.placeholder.com/800x600.png?text=TEST"}
                     alt="Примеры продукции — обложки, визитки и буклеты"
                     style={{ width: '100%', height: 'auto', objectFit: 'contain', maxWidth: '520px', maxHeight: '520px', borderRadius: 8 }}
                     onError={(e) => {
