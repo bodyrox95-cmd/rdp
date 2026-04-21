@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Печать бланков — Рыбинский дом печати</title>
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="Рыбинский дом печати печатает все виды бланков: фирменные бланки организаций, бланки строгой отчётности (БСО), договоры, акты, накладные, квитанции. Возможности: нумерация (последовательная или серийная), перфорация, биговка, брошюровка в блоки.">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Печать бланков — Рыбинский дом печати">
+  <meta property="og:description" content="Рыбинский дом печати печатает все виды бланков: фирменные бланки организаций, бланки строгой отчётности (БСО), договоры, акты, накладные, квитанции. Возможности: нумерация (последовательная или серийная), перфорация, биговка, брошюровка в блоки.">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:site_name" content="Рыбинский дом печати">
+  <meta property="og:image" content="https://your-domain.ru/og-image.png">
+  <meta property="og:url" content="https://your-domain.ru/blanki/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Печать бланков — Рыбинский дом печати">
+  <meta name="twitter:description" content="Рыбинский дом печати печатает все виды бланков: фирменные бланки организаций, бланки строгой отчётности (БСО), договоры, акты, накладные, квитанции. Возможности: нумерация (последовательная или серийная), перфорация, биговка, брошюровка в блоки.">
+  <meta name="twitter:image" content="https://your-domain.ru/og-image.png">
+  <link rel="canonical" href="https://your-domain.ru/blanki/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="/favicon.svg">
+  <script>window.__SITE_URL = 'https://your-domain.ru';</script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&family=PT+Sans:wght@400;700&display=swap');
+  
+img{max-width:100%;height:auto}
+.section,.card{content-visibility:auto;contain-intrinsic-size:1px 600px}
+</style>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #F5F0E8;
+      --bg-dark: #1A1A18;
+      --ink: #1A1A18;
+      --leather: #8B4513;
+      --gold: #C8A96E;
+      --secondary: #4A4A42;
+      --border: #D4CDB8;
+      --white: #FDFAF4;
+      --serif: 'PT Serif', Georgia, serif;
+      --sans: 'PT Sans', Arial, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    #root { min-height: 100vh; }
+
+    /* Typography */
+    h1, h2, h3, h4 { font-family: var(--serif); line-height: 1.2; }
+    h1 { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 700; }
+    h2 { font-size: clamp(1.5rem, 3vw, 2.25rem); font-weight: 700; }
+    h3 { font-size: clamp(1.1rem, 2vw, 1.5rem); font-weight: 700; }
+    p { color: var(--secondary); }
+    a { color: inherit; text-decoration: none; }
+
+    /* Buttons */
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--leather); color: var(--white);
+      font-family: var(--sans); font-size: 15px; font-weight: 700;
+      padding: 14px 28px; border: none; cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+      letter-spacing: 0.02em; text-transform: uppercase;
+    }
+    .btn-primary:hover { background: #7a3b10; transform: translateY(-1px); }
+    .btn-secondary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: transparent; color: var(--ink);
+      font-family: var(--sans); font-size: 15px; font-weight: 700;
+      padding: 13px 27px; border: 2px solid var(--ink); cursor: pointer;
+      transition: all 0.2s; letter-spacing: 0.02em; text-transform: uppercase;
+    }
+    .btn-secondary:hover { background: var(--ink); color: var(--white); }
+    .btn-gold {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--gold); color: var(--ink);
+      font-family: var(--sans); font-size: 15px; font-weight: 700;
+      padding: 14px 28px; border: none; cursor: pointer;
+      transition: all 0.2s; letter-spacing: 0.02em; text-transform: uppercase;
+    }
+    .btn-gold:hover { background: #b8963a; }
+    .btn-ghost-white {
+      display: inline-flex; align-items: center;
+      background: transparent; color: var(--white);
+      font-family: var(--sans); font-size: 15px; font-weight: 700;
+      padding: 13px 27px; border: 2px solid rgba(255,255,255,0.5); cursor: pointer;
+      transition: all 0.2s; letter-spacing: 0.02em; text-transform: uppercase;
+    }
+    .btn-ghost-white:hover { border-color: var(--white); background: rgba(255,255,255,0.1); }
+
+    /* Layout */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .section { padding: 80px 0; }
+    .section-sm { padding: 48px 0; }
+
+    /* Cards */
+    .card {
+      background: var(--white); border: 1px solid var(--border);
+      padding: 32px; transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .card:hover { box-shadow: 0 8px 32px rgba(26,26,24,0.1); transform: translateY(-2px); }
+
+    /* Grid helpers */
+    .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
+    .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+
+    /* Dividers */
+    .divider { width: 60px; height: 3px; background: var(--leather); margin: 16px 0 24px; }
+    .divider-gold { background: var(--gold); }
+
+    /* Tags */
+    .tag {
+      display: inline-block; background: var(--border);
+      color: var(--secondary); font-size: 12px; font-weight: 700;
+      padding: 4px 10px; letter-spacing: 0.08em; text-transform: uppercase;
+    }
+    .tag-leather { background: var(--leather); color: var(--white); }
+    .tag-gold { background: var(--gold); color: var(--ink); }
+
+    /* FAQ accordion */
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-question {
+      width: 100%; text-align: left; background: none; border: none;
+      padding: 20px 0; cursor: pointer; display: flex; justify-content: space-between;
+      align-items: center; font-family: var(--serif); font-size: 17px;
+      color: var(--ink); font-weight: 700; gap: 16px;
+    }
+    .faq-question:hover { color: var(--leather); }
+    .faq-icon { font-size: 20px; flex-shrink: 0; color: var(--leather); transition: transform 0.3s; }
+    .faq-answer { padding: 0 0 20px; color: var(--secondary); line-height: 1.7; }
+
+    /* Form */
+    .form-field { display: flex; flex-direction: column; gap: 6px; }
+    .form-label { font-size: 13px; font-weight: 700; color: var(--secondary); text-transform: uppercase; letter-spacing: 0.06em; }
+    .form-input {
+      background: var(--white); border: 1.5px solid var(--border);
+      padding: 12px 16px; font-family: var(--sans); font-size: 15px;
+      color: var(--ink); transition: border-color 0.2s; outline: none;
+      width: 100%;
+    }
+    .form-input:focus { border-color: var(--leather); }
+    .form-input::placeholder { color: var(--border); }
+    textarea.form-input { min-height: 100px; resize: vertical; }
+    select.form-input { cursor: pointer; }
+
+    /* Price table */
+    .price-table { width: 100%; border-collapse: collapse; }
+    .price-table th { background: var(--ink); color: var(--white); font-family: var(--serif); padding: 12px 16px; text-align: left; font-size: 14px; }
+    .price-table td { padding: 12px 16px; border-bottom: 1px solid var(--border); font-size: 15px; }
+    .price-table tr:nth-child(even) td { background: rgba(245,240,232,0.5); }
+    .price-table td:last-child { font-weight: 700; color: var(--leather); }
+
+    /* Steps */
+    .step-num {
+      width: 48px; height: 48px; border: 2px solid var(--leather);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--serif); font-size: 20px; font-weight: 700;
+      color: var(--leather); flex-shrink: 0;
+    }
+
+    /* Breadcrumbs */
+    .breadcrumb { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+    .breadcrumb-item { font-size: 13px; color: var(--secondary); }
+    .breadcrumb-sep { color: var(--border); }
+    .breadcrumb-item.active { color: var(--ink); font-weight: 700; }
+    .breadcrumb-item a:hover { color: var(--leather); text-decoration: underline; }
+
+    /* Image placeholder */
+    .img-placeholder {
+      background: repeating-linear-gradient(
+        45deg, var(--border), var(--border) 1px,
+        var(--bg) 1px, var(--bg) 10px
+      );
+      display: flex; align-items: center; justify-content: center;
+      color: var(--secondary); font-size: 13px; font-family: monospace;
+      text-align: center; padding: 16px;
+    }
+
+    /* Modal overlay */
+    .modal-overlay {
+      position: fixed; inset: 0; background: rgba(26,26,24,0.75);
+      display: flex; align-items: center; justify-content: center;
+      z-index: 1000; padding: 24px;
+    }
+    .modal-box {
+      background: var(--bg); max-width: 560px; width: 100%;
+      padding: 48px; position: relative; max-height: 90vh; overflow-y: auto;
+    }
+    .modal-close {
+      position: absolute; top: 16px; right: 16px; background: none;
+      border: none; font-size: 24px; cursor: pointer; color: var(--secondary);
+    }
+    .modal-close:hover { color: var(--ink); }
+
+    /* Mobile nav */
+    .mobile-menu {
+      position: fixed; inset: 0; background: var(--ink);
+      z-index: 999; padding: 24px; overflow-y: auto;
+      display: flex; flex-direction: column; gap: 8px;
+    }
+    .mobile-nav-link {
+      padding: 14px 0; font-family: var(--serif); font-size: 18px;
+      color: var(--white); border-bottom: 1px solid rgba(255,255,255,0.1);
+      cursor: pointer; transition: color 0.2s;
+    }
+    .mobile-nav-link:hover { color: var(--gold); }
+
+    /* Notification */
+    .notif {
+      position: fixed; bottom: 24px; right: 24px; background: var(--ink);
+      color: var(--white); padding: 16px 24px; z-index: 2000;
+      font-size: 15px; max-width: 320px; box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+      animation: slideUp 0.3s ease;
+    }
+    @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--border); }
+    ::-webkit-scrollbar-thumb:hover { background: var(--secondary); }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .section { padding: 56px 0; }
+      .container { padding: 0 16px; }
+      .modal-box { padding: 32px 24px; }
+    }
+    @media (max-width: 480px) {
+      .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+    }
+  </style>
+  <script type="application/ld+json" data-static-schema>[{"@context": "https://schema.org", "@type": "Organization", "name": "Рыбинский дом печати", "url": "https://your-domain.ru", "logo": "https://your-domain.ru/favicon.svg", "telephone": "+7-800-222-40-76", "address": {"@type": "PostalAddress", "addressCountry": "RU", "addressLocality": "Рыбинск", "streetAddress": "ул. Чкалова, 8"}}, {"@context": "https://schema.org", "@type": "WebPage", "name": "Печать бланков — Рыбинский дом печати", "url": "https://your-domain.ru/blanki/", "description": "Рыбинский дом печати печатает все виды бланков: фирменные бланки организаций, бланки строгой отчётности (БСО), договоры, акты, накладные, квитанции.\\n\\nВозможности: нумерация (последовательная или серийная), перфорация, биговка, брошюровка в блоки."}]</script>
+</head>
+<body>
+  <div id="root"><div data-prerender="true"><header style="background:var(--bg);border-bottom:2px solid var(--ink)"><div class="container" style="padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap"><a href="/" style="font-family:var(--serif);font-size:28px;font-weight:700">РДП</a><nav style="display:flex;gap:16px;flex-wrap:wrap"><a href="/knigi/">Книги</a><a href="/zhurnaly/">Журналы</a><a href="/vizitki/">Визитки</a><a href="/listovki/">Листовки</a><a href="/kontakty/">Контакты</a></nav></div></header><main><section style="background:var(--ink);color:var(--white);padding:80px 0"><div class="container"><div style="margin-bottom:16px"><span class="tag tag-leather" style="margin-right:8px">Бланки</span><span class="tag tag-leather" style="margin-right:8px">БСО</span></div><h1 style="color:var(--white);max-width:900px">Печать бланков</h1><p style="max-width:860px;color:rgba(255,255,255,.8);font-size:20px;margin:20px 0 32px">Бланки строгой отчётности, фирменные бланки, договоры. Нумерация, перфорация. От 500 шт.</p><div style="display:flex;gap:12px;flex-wrap:wrap"><button class="btn-primary" onclick="document.querySelector('.modal-overlay')?.remove();window.dispatchEvent(new Event('openLeadForm'));">Рассчитать тираж</button><a href="/kontakty/" class="btn-secondary">Контакты</a></div></div></section><div class="section" style="background:var(--white)"><div class="container"><h2 style="margin-bottom:16px">Что важно по услуге</h2><p style="max-width:840px">Рыбинский дом печати печатает все виды бланков: фирменные бланки организаций, бланки строгой отчётности (БСО), договоры, акты, накладные, квитанции.\n\nВозможности: нумерация (последовательная или серийная), перфорация, биговка, брошюровка в блоки.</p><div style="margin-top:24px"><a href="/kontakty/">Запросить расчёт</a> · <a href="/dostavka/">Условия доставки</a> · <a href="/dizayn-maketov/">Требования к макетам</a></div></div></div></main></div></div>
+  <script type="text/babel" src="shared.jsx"></script>
+  <script type="text/babel" src="service-template.jsx"></script>
+  <script type="text/babel" src="pages-data.jsx"></script>
+  <script type="text/babel" src="app.jsx"></script>
+<script>(function(){function a(scope){(scope.querySelectorAll?scope:document).querySelectorAll('img').forEach(function(img){if(!img.hasAttribute('loading'))img.setAttribute('loading','lazy');if(!img.hasAttribute('decoding'))img.setAttribute('decoding','async');if(!img.hasAttribute('fetchpriority'))img.setAttribute('fetchpriority','low');});(scope.querySelectorAll?scope:document).querySelectorAll('iframe').forEach(function(el){if(!el.hasAttribute('loading'))el.setAttribute('loading','lazy');});}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',function(){a(document);});}else{a(document);}new MutationObserver(function(m){m.forEach(function(x){x.addedNodes.forEach(function(n){if(n&&n.nodeType===1)a(n);});});}).observe(document.body,{childList:true,subtree:true});})();</script>
+</body>
+</html>
