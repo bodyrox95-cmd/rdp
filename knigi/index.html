@@ -236,9 +236,23 @@ img{max-width:100%;height:auto}
       .section { padding: 56px 0; }
       .container { padding: 0 16px; }
       .modal-box { padding: 32px 24px; }
+      .topbar-left { gap: 12px !important; font-size: 12px !important; }
+      .topbar-right { display: none !important; }
+      .header-inner { height: auto !important; min-height: 70px; gap: 12px !important; }
+      .desktop-nav { display: none !important; }
+      .header-actions { margin-left: auto; gap: 6px !important; }
+      .header-cta { padding: 10px 12px !important; font-size: 12px !important; white-space: nowrap; }
+      .burger-btn { padding: 8px 10px !important; }
+      .mobile-menu { padding: 20px 16px !important; }
+    }
+    @media (max-width: 560px) {
+      .topbar-left a[href^="tel:"]:last-of-type, .topbar-left span:nth-of-type(2) { display: none !important; }
     }
     @media (max-width: 480px) {
       .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+      .topbar-left { width: 100%; justify-content: space-between; }
+      .topbar-left span:first-child { display: none !important; }
+      .header-cta { display: none !important; }
     }
   </style>
   <script type="application/ld+json" data-static-schema>[{"@context": "https://schema.org", "@type": "Organization", "name": "Рыбинский дом печати", "url": "https://your-domain.ru", "logo": "https://your-domain.ru/favicon.svg", "telephone": "+7-800-222-40-76", "address": {"@type": "PostalAddress", "addressCountry": "RU", "addressLocality": "Рыбинск", "streetAddress": "ул. Чкалова, 8"}}, {"@context": "https://schema.org", "@type": "WebPage", "name": "Печать книг в типографии — Рыбинский дом печати", "url": "https://your-domain.ru/knigi/", "description": "Рыбинский дом печати специализируется на книжной офсетной печати с 1860 года. Производство полного цикла: от подготовки макета до готовой книги в упаковке.\\n\\nОфсетная печать книг — оптимальный выбор для тиражей от 500 экземпляров. Рулонные офсетные машины позволяют печатать блок сразу в тетрадку — это снижает себестоимость на 30% по сравнению с листовой офсетной печатью.\\n\\nЦифровая печать — для тиражей от 1 до 500 экземпляров. Оперативный запуск, без минимального тиража. Идеально для авторских изданий и самиздата."}]</script>

@@ -64,13 +64,13 @@ function Header({ navigate, currentPath }) {
       {/* Top bar */}
       <div style={{ background: 'var(--ink)', color: 'var(--white)', padding: '8px 0' }}>
         <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 8 }}>
-          <div style={{ display: 'flex', gap: 24, alignItems: 'center', flexWrap: 'wrap', fontSize: 13 }}>
+          <div className="topbar-left" style={{ display: 'flex', gap: 24, alignItems: 'center', flexWrap: 'wrap', fontSize: 13 }}>
             <span style={{ color: 'var(--border)' }}>Пн–Пт, 8:00–17:00</span>
             <a href="tel:88002224076" style={{ color: 'var(--gold)', fontWeight: 700 }}>8-800-222-40-76</a>
             <span style={{ color: 'var(--border)', fontSize: 12 }}>бесплатно</span>
             <a href="tel:+74855214961" style={{ color: 'rgba(255,255,255,0.7)', fontSize: 12 }}>+7 (4855) 21-49-61</a>
           </div>
-          <div style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
+          <div className="topbar-right" style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
             <a href="https://wa.me/78002224076" style={{ color: 'var(--gold)', fontSize: 13, display: 'flex', alignItems: 'center', gap: 4 }}>
               <span>WhatsApp</span>
             </a>
@@ -82,7 +82,7 @@ function Header({ navigate, currentPath }) {
 
       {/* Main header */}
       <header style={{ background: 'var(--bg)', borderBottom: '2px solid var(--ink)', position: 'sticky', top: 0, zIndex: 100 }}>
-        <div className="container" style={{ display: 'flex', alignItems: 'center', height: 70, gap: 32 }}>
+        <div className="container header-inner" style={{ display: 'flex', alignItems: 'center', height: 70, gap: 32 }}>
           {/* Logo */}
           <RouteLink href="/" navigate={navigate} style={{ cursor: 'pointer', flexShrink: 0, display: 'block' }} aria-label="На главную">
             <div style={{ fontFamily: 'var(--serif)', fontSize: 22, fontWeight: 700, letterSpacing: '-0.02em', lineHeight: 1 }}>
@@ -114,12 +114,12 @@ function Header({ navigate, currentPath }) {
             </RouteLink>
           </nav>
 
-          <div style={{ display: 'flex', gap: 8, flexShrink: 0 }}>
-            <button className="btn-primary" style={{ padding: '10px 18px', fontSize: 13 }} onClick={() => setFormOpen(true)}>
+          <div className="header-actions" style={{ display: 'flex', gap: 8, flexShrink: 0 }}>
+            <button className="btn-primary header-cta" style={{ padding: '10px 18px', fontSize: 13 }} onClick={() => setFormOpen(true)}>
               Рассчитать тираж
             </button>
             {/* Burger */}
-            <button onClick={() => setMenuOpen(true)} style={{ background: 'none', border: '1.5px solid var(--border)', padding: '8px 12px', cursor: 'pointer', display: 'flex', flexDirection: 'column', gap: 4 }}>
+            <button className="burger-btn" aria-label="Открыть меню" onClick={() => setMenuOpen(true)} style={{ background: 'none', border: '1.5px solid var(--border)', padding: '8px 12px', cursor: 'pointer', display: 'flex', flexDirection: 'column', gap: 4 }}>
               <span style={{ display: 'block', width: 20, height: 2, background: 'var(--ink)' }}/>
               <span style={{ display: 'block', width: 20, height: 2, background: 'var(--ink)' }}/>
               <span style={{ display: 'block', width: 14, height: 2, background: 'var(--ink)' }}/>
