@@ -313,7 +313,7 @@ img{max-width:100%;height:auto}
 <body>
   <div id="root"><div data-prerender="true"><header style="background:var(--bg);border-bottom:2px solid var(--ink)"><div class="container" style="padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap"><a href="/rdp/" style="font-family:var(--serif);font-size:28px;font-weight:700">РДП</a><nav style="display:flex;gap:16px;flex-wrap:wrap"><a href="/knigi/">Книги</a><a href="/zhurnaly/">Журналы</a><a href="/vizitki/">Визитки</a><a href="/listovki/">Листовки</a><a href="/kontakty/">Контакты</a></nav></div></header><main><section style="background:var(--ink);color:var(--white);padding:80px 0"><div class="container"><div style="margin-bottom:16px"></div><h1 style="color:var(--white);max-width:900px">Рыбинский дом печати</h1><p style="max-width:860px;color:rgba(255,255,255,.8);font-size:20px;margin:20px 0 32px">Офсетная и цифровая типография полного цикла. Печать книг, журналов, брошюр, визиток и деловой полиграфии. Производство в Рыбинске, доставка по России.</p><div style="display:flex;gap:12px;flex-wrap:wrap"><button class="btn-primary" onclick="document.querySelector('.modal-overlay')?.remove();window.dispatchEvent(new Event('openLeadForm'))">Рассчитать тираж</button><a href="/kontakty/" class="btn-secondary">Контакты</a></div></div>
   <div style="position:absolute;right:0;top:0;bottom:0;width:48%;display:flex;align-items:center;justify-content:flex-end;padding-right:48px;pointer-events:none">
-    <img src="https://raw.githubusercontent.com/bodyrox95-cmd/rdp/main/screenshots/current.png" alt="Примеры продукции" style="max-width:620px;width:100%;height:auto;object-fit:contain;background:var(--ink);display:block" />
+    <img src="https://raw.githubusercontent.com/bodyrox95-cmd/rdp/main/screenshots/current.webp" alt="Примеры продукции" style="max-width:620px;width:100%;height:auto;object-fit:contain;background:var(--ink);display:block" onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/bodyrox95-cmd/rdp/main/screenshots/current.png'" />
   </div>
 </section><div class="section" style="background:var(--white)"><div class="container"><h2 style="margin-bottom:16px">Популярные направления</h2><ul style="columns:2;max-width:900px"><li style="margin-bottom:8px"><a href="/knigi/">Печать книг в типографии</a></li><li style="margin-bottom:8px"><a href="/knigi/tverdyy-pereplet/">Печать книг в твёрдом переплёте</a></li><li style="margin-bottom:8px"><a href="/knigi/myagkiy-pereplet/">Печать книг в мягком переплёте КБС</a></li><li style="margin-bottom:8px"><a href="/knigi/malyy-tirazh/">Печать книги малым тиражом</a></li><li style="margin-bottom:8px"><a href="/uchebniki/">Печать учебников и монографий</a></li><li style="margin-bottom:8px"><a href="/zhurnaly/">Печать журналов и газет</a></li><li style="margin-bottom:8px"><a href="/vizitki/">Печать визиток</a></li><li style="margin-bottom:8px"><a href="/listovki/">Печать листовок и флаеров</a></li></ul></div></div></main></div></div>
   <script type="text/babel" src="shared.jsx"></script>
@@ -327,8 +327,9 @@ img{max-width:100%;height:auto}
   var container = document.querySelector('.hero-book-container');
   if(container && !container.querySelector('img')){
     var img = new Image();
-    img.src = 'https://raw.githubusercontent.com/bodyrox95-cmd/rdp/main/screenshots/current.png';
+    img.src = 'https://raw.githubusercontent.com/bodyrox95-cmd/rdp/main/screenshots/current.webp';
     img.alt = 'Примеры продукции';
+    img.onerror = function(){ if(!this.dataset.fallback){ this.dataset.fallback = '1'; this.src = 'https://raw.githubusercontent.com/bodyrox95-cmd/rdp/main/screenshots/current.png'; } };
     img.style.maxWidth = '620px';
     img.style.width = '100%';
     img.style.height = 'auto';
