@@ -75,9 +75,9 @@ function HomePage({ navigate, showForm }) {
               <div style={{ width: '100%', maxWidth: 520, textAlign: 'right', display: 'flex', justifyContent: 'flex-end' }}>
                 <div style={{ position: 'relative', zIndex: 3, width: '100%', maxWidth: 620, display: 'flex', justifyContent: 'flex-end', alignItems: 'center', background: 'var(--ink)', padding: '8px 12px', borderRadius: 0 }}>
                   <picture>
-                    <source srcSet={'/screenshots/current.webp'} type="image/webp" />
-                    <img
-                      src={'/screenshots/current.png'}
+                    <source srcSet={'https://raw.githubusercontent.com/bodyrox95-cmd/rdp/main/screenshots/current.webp'} type="image/webp" />
+                      <img
+                        src={'https://raw.githubusercontent.com/bodyrox95-cmd/rdp/main/screenshots/current.png'}
                       alt="Примеры продукции — обложки, визитки и буклеты"
                       style={{ display: 'block', width: '100%', height: 'auto', objectFit: 'contain', maxWidth: '620px', maxHeight: '620px', background: 'var(--ink)' }}
                       onError={(e) => {
