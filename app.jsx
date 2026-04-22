@@ -75,15 +75,15 @@ function HomePage({ navigate, showForm }) {
               <div style={{ width: '100%', maxWidth: 520, textAlign: 'right', display: 'flex', justifyContent: 'flex-end' }}>
                 <div style={{ position: 'relative', zIndex: 3, width: '100%', maxWidth: 520, display: 'flex', justifyContent: 'flex-end' }}>
                   <picture>
-                    <source srcSet={'/screenshots/current.webp'} type="image/webp" />
+                    <source srcSet={'https://raw.githubusercontent.com/bodyrox95-cmd/rdp/main/screenshots/current.webp'} type="image/webp" />
                     <img
-                      src={'/screenshots/current.png'}
+                      src={'https://raw.githubusercontent.com/bodyrox95-cmd/rdp/main/screenshots/current.png'}
                       alt="Примеры продукции — обложки, визитки и буклеты"
                       style={{ width: '100%', height: 'auto', objectFit: 'contain', maxWidth: '520px', maxHeight: '520px', borderRadius: 8 }}
                       onError={(e) => {
                         if (!e.target.dataset.fallback) {
                           e.target.dataset.fallback = '1';
-                          e.target.src = '/screenshots/current.webp';
+                          e.target.src = 'https://raw.githubusercontent.com/bodyrox95-cmd/rdp/main/screenshots/current.webp';
                         } else {
                           e.target.style.display = 'none';
                         }
