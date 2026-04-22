@@ -311,7 +311,7 @@ img{max-width:100%;height:auto}
   <script type="application/ld+json" data-static-schema>[{"@context": "https://schema.org", "@type": "Organization", "name": "Рыбинский дом печати", "url": "https://your-domain.ru", "logo": "https://your-domain.ru/favicon.svg", "telephone": "+7-800-222-40-76", "address": {"@type": "PostalAddress", "addressCountry": "RU", "addressLocality": "Рыбинск", "streetAddress": "ул. Чкалова, 8"}}, {"@context": "https://schema.org", "@type": "WebSite", "name": "Рыбинский дом печати", "url": "https://your-domain.ru", "inLanguage": "ru-RU"}]</script>
 </head>
 <body>
-  <div id="root"><div data-prerender="true"><header style="background:var(--bg);border-bottom:2px solid var(--ink)"><div class="container" style="padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap"><a href="/" style="font-family:var(--serif);font-size:28px;font-weight:700">РДП</a><nav style="display:flex;gap:16px;flex-wrap:wrap"><a href="/knigi/">Книги</a><a href="/zhurnaly/">Журналы</a><a href="/vizitki/">Визитки</a><a href="/listovki/">Листовки</a><a href="/kontakty/">Контакты</a></nav></div></header><main><section style="background:var(--ink);color:var(--white);padding:80px 0"><div class="container"><div style="margin-bottom:16px"></div><h1 style="color:var(--white);max-width:900px">Рыбинский дом печати</h1><p style="max-width:860px;color:rgba(255,255,255,.8);font-size:20px;margin:20px 0 32px">Офсетная и цифровая типография полного цикла. Печать книг, журналов, брошюр, визиток и деловой полиграфии. Производство в Рыбинске, доставка по России.</p><div style="display:flex;gap:12px;flex-wrap:wrap"><button class="btn-primary" onclick="document.querySelector('.modal-overlay')?.remove();window.dispatchEvent(new Event('openLeadForm'))">Рассчитать тираж</button><a href="/kontakty/" class="btn-secondary">Контакты</a></div></div>
+  <div id="root"><div data-prerender="true"><header style="background:var(--bg);border-bottom:2px solid var(--ink)"><div class="container" style="padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap"><a href="/rdp/" style="font-family:var(--serif);font-size:28px;font-weight:700">РДП</a><nav style="display:flex;gap:16px;flex-wrap:wrap"><a href="/knigi/">Книги</a><a href="/zhurnaly/">Журналы</a><a href="/vizitki/">Визитки</a><a href="/listovki/">Листовки</a><a href="/kontakty/">Контакты</a></nav></div></header><main><section style="background:var(--ink);color:var(--white);padding:80px 0"><div class="container"><div style="margin-bottom:16px"></div><h1 style="color:var(--white);max-width:900px">Рыбинский дом печати</h1><p style="max-width:860px;color:rgba(255,255,255,.8);font-size:20px;margin:20px 0 32px">Офсетная и цифровая типография полного цикла. Печать книг, журналов, брошюр, визиток и деловой полиграфии. Производство в Рыбинске, доставка по России.</p><div style="display:flex;gap:12px;flex-wrap:wrap"><button class="btn-primary" onclick="document.querySelector('.modal-overlay')?.remove();window.dispatchEvent(new Event('openLeadForm'))">Рассчитать тираж</button><a href="/kontakty/" class="btn-secondary">Контакты</a></div></div>
   <div style="position:absolute;right:0;top:0;bottom:0;width:48%;display:flex;align-items:center;justify-content:flex-end;padding-right:48px;pointer-events:none">
     <img src="https://raw.githubusercontent.com/bodyrox95-cmd/rdp/main/screenshots/current.png" alt="Примеры продукции" style="max-width:620px;width:100%;height:auto;object-fit:contain;background:var(--ink);display:block" />
   </div>
@@ -321,5 +321,25 @@ img{max-width:100%;height:auto}
   <script type="text/babel" src="pages-data.jsx"></script>
   <script type="text/babel" src="app.jsx"></script>
 <script>(function(){function a(scope){(scope.querySelectorAll?scope:document).querySelectorAll('img').forEach(function(img){if(!img.hasAttribute('loading'))img.setAttribute('loading','lazy');if(!img.hasAttribute('decoding'))img.setAttribute('decoding','async');if(!img.hasAttribute('fetchpriority'))img.setAttribute('fetchpriority','low');});(scope.querySelectorAll?scope:document).querySelectorAll('iframe').forEach(function(el){if(!el.hasAttribute('loading'))el.setAttribute('loading','lazy');});}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',function(){a(document);});}else{a(document);}new MutationObserver(function(m){m.forEach(function(x){x.addedNodes.forEach(function(n){if(n&&n.nodeType===1)a(n);});});}).observe(document.body,{childList:true,subtree:true});})();</script>
+
+<script>
+(function(){
+  var container = document.querySelector('.hero-book-container');
+  if(container && !container.querySelector('img')){
+    var img = new Image();
+    img.src = 'https://raw.githubusercontent.com/bodyrox95-cmd/rdp/main/screenshots/current.png';
+    img.alt = 'Примеры продукции';
+    img.style.maxWidth = '620px';
+    img.style.width = '100%';
+    img.style.height = 'auto';
+    img.style.objectFit = 'contain';
+    img.style.background = 'var(--ink)';
+    img.style.display = 'block';
+    img.style.pointerEvents = 'none';
+    container.appendChild(img);
+  }
+})();
+</script>
+
 </body>
 </html>
