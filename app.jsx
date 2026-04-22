@@ -73,17 +73,17 @@ function HomePage({ navigate, showForm }) {
           {/* Premium Book Display */}
             <div className="hero-book-container" style={{ justifyContent: 'flex-end', alignItems: 'center', minHeight: '500px', display: 'flex' }}>
               <div style={{ width: '100%', maxWidth: 520, textAlign: 'right', display: 'flex', justifyContent: 'flex-end' }}>
-                <div style={{ position: 'relative', zIndex: 3, width: '100%', maxWidth: 520, display: 'flex', justifyContent: 'flex-end' }}>
+                <div style={{ position: 'relative', zIndex: 3, width: '100%', maxWidth: 620, display: 'flex', justifyContent: 'flex-end', alignItems: 'center', background: 'var(--ink)', padding: '8px 12px', borderRadius: 0 }}>
                   <picture>
-                    <source srcSet={'https://raw.githubusercontent.com/bodyrox95-cmd/rdp/main/screenshots/current.webp'} type="image/webp" />
+                    <source srcSet={'/screenshots/current.webp'} type="image/webp" />
                     <img
-                      src={'https://raw.githubusercontent.com/bodyrox95-cmd/rdp/main/screenshots/current.png'}
+                      src={'/screenshots/current.png'}
                       alt="Примеры продукции — обложки, визитки и буклеты"
-                      style={{ width: '100%', height: 'auto', objectFit: 'contain', maxWidth: '520px', maxHeight: '520px', borderRadius: 8 }}
+                      style={{ display: 'block', width: '100%', height: 'auto', objectFit: 'contain', maxWidth: '620px', maxHeight: '620px', background: 'var(--ink)' }}
                       onError={(e) => {
                         if (!e.target.dataset.fallback) {
                           e.target.dataset.fallback = '1';
-                          e.target.src = 'https://raw.githubusercontent.com/bodyrox95-cmd/rdp/main/screenshots/current.webp';
+                          e.target.src = 'https://raw.githubusercontent.com/bodyrox95-cmd/rdp/main/screenshots/current.png';
                         } else {
                           e.target.style.display = 'none';
                         }
